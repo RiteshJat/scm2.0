@@ -10,11 +10,16 @@
     <hr/>
 
     <!-- <div th:insert="~{base :: parentFragment('one','two')}"></div> -->
-     <div class="host-tag" th:replace="~{base :: parentFragment(~{::section})}"></div>
-     <section> 
-        <h2>Dynamic content</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, laborum.</p>
+     <div class="host-tag" 
+     th:insert="${isLogin} ? (~{base :: parentFragment(~{::#abc})}) : (~{base :: test(~{::#xyz})})"></div>
+     
+     <section id="abc">
+        <h1>User is logged in</h1>
         <button>Click on Dynamic content</button>
+     </section>
+
+     <section id="xyz">
+        <h1>User is not logged in</h1>
      </section>
      
 </body>
