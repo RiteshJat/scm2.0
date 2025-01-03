@@ -3,7 +3,9 @@ console.log('Hello from script.js');
 let currentTheme = getTheme();
 console.log("Current theme: " + currentTheme);
 
-changeTheme();
+document.addEventListener("DOMContentLoaded", () => {
+    changeTheme();
+});
 
 // TODO
 function changeTheme() {
