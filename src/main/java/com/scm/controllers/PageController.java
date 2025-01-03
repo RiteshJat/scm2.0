@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class PageController {
@@ -50,4 +51,19 @@ public class PageController {
         System.out.println("signup page requested");
         return "signup";
     }
+
+    @RequestMapping(value="/do-register", method = RequestMethod.POST)
+    public String registerUser() {
+        System.out.println("registering user");
+        // fetch form data
+        
+
+        // validate form data
+        // save data to database
+        // message = "User registered successfully"
+        // redirect to login page
+        return "redirect:/signup";
+    }
+
+
 }
