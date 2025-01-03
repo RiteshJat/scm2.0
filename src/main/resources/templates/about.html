@@ -1,26 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>About Page</title>
 </head>
-<body>
-    <h1>This is About Page</h1>
-    <hr/>
-
-    <!-- <div th:insert="~{base :: parentFragment('one','two')}"></div> -->
-     <div class="host-tag" 
-     th:insert="${isLogin} ? (~{base :: parentFragment(~{::#abc})}) : (~{base :: test(~{::#xyz})})"></div>
-     
-     <section id="abc">
-        <h1>User is logged in</h1>
-        <button>Click on Dynamic content</button>
-     </section>
-
-     <section id="xyz">
-        <h1>User is not logged in</h1>
-     </section>
-     
+<body> 
+    <div id="content">
+        <h1>Welcome to about page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?</p>
+    </div>
+    <script>
+        console.log("About Page Script");
+    </script>
+    <script>
+        console.log("About Page Script 2");
+    </script>
 </body>
 </html>

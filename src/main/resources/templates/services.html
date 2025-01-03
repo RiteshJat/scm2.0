@@ -1,34 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{})}" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Services Page</title>
 </head>
-<body>
-    <!-- <h1>This is services Page</h1>
-    <hr/> -->
-
-    <!-- <div th:replace="~{base :: parentFragment('services one','services two')}"></div> -->
-
-    <div th:replace="~{base :: parentFragment(~{::#main_content})}"></div>
-    <div th:replace="~{base :: parentFragment(~{::#second_content})}"></div>
-    <div th:replace="~{base :: parentFragment(~{::.third_content})}"></div>
-    <section id="main_content">
-        <h2>Services 1</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, laborum.</p>
-        <button>Click on Services</button>
+<body> 
+    <section id="content">
+        <h1>Welcome to services page</h1>
+        <h2>Services offered by SCM</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?</p>
     </section>
-    <section id="second_content">
-        <h2>Services 2</h2>
-        <p>This is second_content</p>
-        <button>Click on Services</button>
-    </section>
-    <section class="third_content">
-        <h2>Services 3</h2>
-        <p>This is third_content</p>
-        <button>Click on Services</button>
-    </section>
-
 </body>
 </html>

@@ -1,25 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" data-th-href="@{/css/output.css}"/>
-    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <title>About Page</title>
 </head>
-<body>
-    <div class="bg-gray-200 w-1/2 mx-auto flex flex-col space-y-3 p-4 mt-4 items-center justify-center">
-        <h1 class="text-2xl font-bold" data-th-text="${name}">Welcome to home page</h1>
-        <p class="text-gray-700 text-xl">Youtube Channel : <span data-th-text="${youTube}"></span></p>
-        <p>GitHub Repo : <span data-th-text="${gitHub_Repo}"></span></p>
-        <a class="text-blue-500" th:href="${gitHub_Repo}">Click here to open</a>
-        <p class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dignissimos recusandae debitis veniam at. Nihil esse quod accusamus, quia quas, dolorem saepe optio, nulla adipisci doloribus rerum labore dicta in illum molestias corrupti nostrum quibusdam ipsum unde exercitationem possimus voluptates. Asperiores modi cupiditate officiis. Possimus nesciunt vero non quisquam nisi.</p>
-        <div>
-            <button class="bg-blue-600 px-3 py-3 text-white rounded hover:bg-blue-500">Click Here</button>
-        </div>
-        
+<body> 
+    <div id="content">
+        <h1>Welcome to Home page</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, ratione?</p>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+        console.log("Home Page Script");
+    </script>
 </body>
 </html>
