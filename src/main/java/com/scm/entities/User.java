@@ -6,19 +6,29 @@ import java.util.List;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import lombok.Data;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Entity(name = "user")
 @Table(name = "users")
-@Data
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class User {
 
     @Id
-    private int userId;
+    private String userId;
 
     @Column(name = "user_name",nullable = false)
     private String name;
@@ -31,12 +41,13 @@ public class User {
     private String about;
     @Column(length = 5000)
     private String profilePic;
-    private String role;
+    private String phoneNumber;
     // information
     private boolean enabled=false;
     private boolean emailVerified=false;
     private boolean phoneVerified=false;
 
+    @Enumerated(value = EnumType.STRING)
     //SELF, GOOGLE, FACEBOOK, GITHUB, LINKEDIN
     private Providers provider = Providers.SELF;
     private String providerUserId;
